@@ -1,0 +1,6 @@
+mot = input('insert ton prenom')
+print(mot)
+print(mot.upper())
+print(mot.lower())
+print(mot[::-1])
+print(len(mot))

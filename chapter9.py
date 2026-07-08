@@ -1,3 +1,4 @@
+import re
 def is_phone_number(text):
     if len(text) != 12:
         return False
@@ -15,7 +16,9 @@ def is_phone_number(text):
         if not text[i].isdecimal():
             return False
     return True
-
+pattern = re.compile(r'\d{3}-\d{3}-\d{4}')
+match = pattern.search('Mon num: 415-555-4242')
+print(match.group())
 
 print('Is 415-555-4242 a phone number?', is_phone_number('415-555-4242'))
 print(is_phone_number('415-555-4242'))
